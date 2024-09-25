@@ -6,13 +6,35 @@
     <title>Listado de Usuarios</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .stars {
-            color: gold;
-        }
+    .star {
+  color: gold; /* Color para las estrellas llenas */
+}
+
+.star.empty {
+  color: lightgray; /* Color para las estrellas vacías */
+}
+
+body{
+    background-color: lightgray;
+}
     </style>
 </head>
 <body>
-    <div id="lista-usuarios"></div>
+    <div class="container mt-5">
+        <h2>Lista de Usuarios</h2>
+        <ul id="lista-usuarios" class="list-group mb-4"></ul>
+        
+        <h3>Agregar Comentario</h3>
+        <div class="form-group">
+            <label for="usuario-select">Selecciona un usuario:</label>
+            <select id="usuario-select" class="form-control">
+                <option value="">Seleccione un usuario</option>
+            </select>
+        </div>
+        <textarea id="comentario-input" class="form-control" placeholder="Escribe tu comentario..." rows="3"></textarea>
+        <button id="enviar-comentario" class="btn btn-primary mt-2">Enviar comentario</button>
+        <div id="comentarios-generales" class="mt-3"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
